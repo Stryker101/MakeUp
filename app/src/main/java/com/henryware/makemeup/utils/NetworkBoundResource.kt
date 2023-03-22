@@ -2,8 +2,6 @@ package com.henryware.makemeup.utils
 
 import kotlinx.coroutines.flow.*
 
-// ktlint-disable no-wildcard-imports
-
 inline fun <ResultType, RequestType> networkBoundResource(
     crossinline query: () -> Flow<ResultType>,
     crossinline fetch: suspend() -> RequestType,
