@@ -24,28 +24,25 @@ jobs:
 
 
   unit-test:
-    build:
-
       runs-on: ubuntu-latest
-
       steps:
-        - name: checkout
-          uses: actions/checkout@v3.0.0
+          - name: checkout
+            uses: actions/checkout@v3.0.0
 
-        - name: Setup Java JDK
-          uses: actions/setup-java@v3.0.0
-          with:
-            distribution: 'temurin'
-            java-version: 17.0.2+8
+          - name: Setup Java JDK
+            uses: actions/setup-java@v3.0.0
+            with:
+              distribution: 'temurin'
+              java-version: 17.0.2+8
 
-        - name: Grant execute permission for gradlew
-          run: chmod +x gradlew
+          - name: Grant execute permission for gradlew
+            run: chmod +x gradlew
 
-        - name: Unit Tests
-          run: ./gradlew test
+          - name: Unit Tests
+            run: ./gradlew test
 
-        - name: Build with Gradle
-          run: ./gradlew build
+          - name: Build with Gradle
+            run: ./gradlew build
 #    needs: [ lint ]
 #    runs-on: ubuntu-latest
 #    steps:
@@ -80,26 +77,3 @@ jobs:
 #          with:
 #            name: instrumentation_test_report
 #            path: app/build/reports/androidTests/connected/
-=======
-
-  instrumentation-test:
-    needs: [ unit-test ]
-    runs-on: macos-latest
-    steps:
-      - name: Checkout the code
-        uses: actions/checkout@v2
-
-      - name: Run espresso test
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-            api-level: 33
-            arch: x86_64
-            profile: Nexus 6
-            script: ./gradlew connectedCheck
-
-      - name: Upload test report
-        uses: actions/upload-artifact@v2
-        with:
-            name: instrumentation_test_report
-            path: app/build/reports/androidTests/connected/
-
