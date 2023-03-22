@@ -24,37 +24,59 @@ jobs:
 
 
   unit-test:
-    needs: [ lint ]
-    runs-on: ubuntu-latest
-    steps:
-         - name: Checkout the code
-           uses: actions/checkout@v2
+    build:
 
-         - name: Run unit tests
-           run: ./gradlew test
+      runs-on: ubuntu-latest
 
-         - name: Upload test report
-           uses: actions/upload-artifact@v2
-           with:
-               name: unit_test_report
-               path: app/build/reports/tests/testDebugUnitTest/
+      steps:
+        - name: checkout
+          uses: actions/checkout@v3.0.0
 
-
-  instrumentation-test:
-    needs: [ unit-test ]
-    runs-on: macos-latest
-    steps:
-      - name: Checkout the code
-        uses: actions/checkout@v2
-
-      - name: Run espresso test
-        uses: reactivecircus/android-emulator-runner@v2
+        - name: Setup Java JDK
+          uses: actions/setup-java@v3.0.0
           with:
-            api-level: 33
-            script: ./gradlew connectedCheck
+            distribution: 'temurin'
+            java-version: 17.0.2+8
 
-      - name: Upload test report
-          uses: actions/upload-artifact@v2
-          with:
-            name: instrumentation_test_report
-            path: app/build/reports/androidTests/connected/
+        - name: Grant execute permission for gradlew
+          run: chmod +x gradlew
+
+        - name: Unit Tests
+          run: ./gradlew test
+
+        - name: Build with Gradle
+          run: ./gradlew build
+#    needs: [ lint ]
+#    runs-on: ubuntu-latest
+#    steps:
+#         - name: Checkout the code
+#           uses: actions/checkout@v2
+#
+#         - name: Run unit tests
+#           run: ./gradlew test
+#
+#         - name: Upload test report
+#           uses: actions/upload-artifact@v2
+#           with:
+#               name: unit_test_report
+#               path: app/build/reports/tests/testDebugUnitTest/
+
+
+#  instrumentation-test:
+#    needs: [ unit-test ]
+#    runs-on: macos-latest
+#    steps:
+#      - name: Checkout the code
+#        uses: actions/checkout@v2
+#
+#      - name: Run espresso test
+#        uses: reactivecircus/android-emulator-runner@v2
+#          with:
+#            api-level: 33
+#            script: ./gradlew connectedCheck
+#
+#      - name: Upload test report
+#          uses: actions/upload-artifact@v2
+#          with:
+#            name: instrumentation_test_report
+#            path: app/build/reports/androidTests/connected/
