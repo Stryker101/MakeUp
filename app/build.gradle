@@ -81,7 +81,7 @@ dependencies {
     //Dagger Hilt
     implementation "com.google.dagger:dagger-android-support:2.42"
     implementation 'com.google.dagger:hilt-android:2.37'
-    annotationProcessor 'com.google.dagger:hilt-compiler:2.37'
+    kapt 'com.google.dagger:hilt-compiler:2.37'
     kapt "org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.4.2"
 
     //Navigation
