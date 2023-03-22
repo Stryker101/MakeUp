@@ -7,38 +7,38 @@ on:
   workflow_dispatch:
   
 jobs:
-#   lint:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout the code
-#         uses: actions/checkout@v2
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
         
-#       - name: Run lint
-#         run: ./gradlew lintDebug
+      - name: Run lint
+        run: ./gradlew lintDebug
         
-#       - name: Upload html test report
-#         uses: actions/upload-artifact@v2
-#         with:
-#           name: lint.html
-#           path: app/build/reports/lint-results-debug.html
+      - name: Upload html test report
+        uses: actions/upload-artifact@v2
+        with:
+          name: lint.html
+          path: app/build/reports/lint-results-debug.html
           
-#   unit-test:       
-#       needs: [ lint ]
-#       runs-on: ubuntu-latest
-#       steps:
-#         - name: Checkout the code
-#           uses: actions/checkout@v2
+  unit-test:       
+      needs: [ lint ]
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout the code
+          uses: actions/checkout@v2
 
-#         - name: Run unit tests
-#           run: ./gradlew test
+        - name: Run unit tests
+          run: ./gradlew test
 
-#         - name: Upload test report
-#           uses: actions/upload-artifact@v2
-#           with:
-#               name: unit_test_report
-#               path: app/build/reports/tests/testDebugUnitTest/
+        - name: Upload test report
+          uses: actions/upload-artifact@v2
+          with:
+              name: unit_test_report
+              path: app/build/reports/tests/testDebugUnitTest/
   package:
-#     needs: [unit-test]
+    needs: [unit-test]
     name: Generate APK
     runs-on: ubuntu-latest
     steps:
