@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 7.4.2" type="baseline" client="gradle" dependencies="false" name="AGP (7.4.2)" variant="all" version="7.4.2">
+
+    <issue
+        id="NewApi"
+        message="`android:statusBarColor` requires API level 21 (current min is 17)"
+        errorLine1="        &lt;item name=&quot;android:statusBarColor&quot; tools:targerApi=&apos;l&apos;>?attr/colorPrimaryVariant&lt;/item>"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-night/themes.xml"
+            line="13"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="`android:statusBarColor` requires API level 21 (current min is 17)"
+        errorLine1="        &lt;item name=&quot;android:statusBarColor&quot; tools:targerApi=&apos;l&apos;>?attr/colorPrimaryVariant&lt;/item>"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="13"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="`android:windowLightStatusBar` requires API level 23 (current min is 17)"
+        errorLine1="        &lt;item name=&quot;android:windowLightStatusBar&quot; tools:targerApi=&apos;l&apos;>true&lt;/item>"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-night-v21/themes.xml"
+            line="14"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="`android:windowLightStatusBar` requires API level 23 (current min is 17)"
+        errorLine1="        &lt;item name=&quot;android:windowLightStatusBar&quot; tools:targerApi=&apos;l&apos;>true&lt;/item>"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-night/themes.xml"
+            line="14"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="`android:windowLightStatusBar` requires API level 23 (current min is 17)"
+        errorLine1="        &lt;item name=&quot;android:windowLightStatusBar&quot; tools:targerApi=&apos;23&apos;>true&lt;/item>"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="14"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="`android:windowLightStatusBar` requires API level 23 (current min is 17)"
+        errorLine1="        &lt;item name=&quot;android:windowLightStatusBar&quot; tools:targerApi=&apos;23&apos;>true&lt;/item>"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values-v21/themes.xml"
+            line="15"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="NotificationPermission"
+        message="When targeting Android 13 or higher, posting a permission requires holding the `POST_NOTIFICATIONS` permission (usage from com.bumptech.glide.request.target.NotificationTarget)">
+        <location
+            file="src/main/AndroidManifest.xml"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.dagger:hilt-android than 2.37 is available: 2.45"
+        errorLine1="    implementation &apos;com.google.dagger:hilt-android:2.37&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="87"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.dagger:hilt-compiler than 2.37 is available: 2.44"
+        errorLine1="    kapt &apos;com.google.dagger:hilt-compiler:2.37&apos;"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="88"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-metadata-jvm than 0.4.2 is available: 0.5.0"
+        errorLine1="    kapt &quot;org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.4.2&quot;"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="89"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        message="Invalid layout param in a `LinearLayout`: `layout_below`"
+        errorLine1="            android:layout_below=&quot;@id/item_image&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_product_details.xml"
+            line="21"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        message="Invalid layout param in a `LinearLayout`: `layout_below`"
+        errorLine1="            android:layout_below=&quot;@id/item_name&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_product_details.xml"
+            line="45"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        message="Invalid layout param in a `LinearLayout`: `layout_toEndOf`"
+        errorLine1="        android:layout_toEndOf=&quot;@id/imageView&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/product_item.xml"
+            line="21"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        message="Invalid layout param in a `LinearLayout`: `layout_below`"
+        errorLine1="        android:layout_below=&quot;@id/product_name&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/product_item.xml"
+            line="31"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        message="Invalid layout param in a `LinearLayout`: `layout_toEndOf`"
+        errorLine1="        android:layout_toEndOf=&quot;@id/imageView&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/product_item.xml"
+            line="32"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.hello_blank_fragment` appears to be unused"
+        errorLine1="    &lt;string name=&quot;hello_blank_fragment&quot;>Hello blank fragment&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="4"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MonochromeLauncherIcon"
+        message="The application adaptive icon is missing a monochrome tag"
+        errorLine1="&lt;adaptive-icon xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
+        errorLine2="^">
+        <location
+            file="src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="MonochromeLauncherIcon"
+        message="The application adaptive roundIcon is missing a monochrome tag"
+        errorLine1="&lt;adaptive-icon xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
+        errorLine2="^">
+        <location
+            file="src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="WebpUnsupported"
+        message="WebP extended or lossless format requires Android 4.2.1 (API 18); current minSdkVersion is 17">
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher.webp"/>
+    </issue>
+
+    <issue
+        id="WebpUnsupported"
+        message="WebP extended or lossless format requires Android 4.2.1 (API 18); current minSdkVersion is 17">
+        <location
+            file="src/main/res/mipmap-mdpi/ic_launcher.webp"/>
+    </issue>
+
+    <issue
+        id="WebpUnsupported"
+        message="WebP extended or lossless format requires Android 4.2.1 (API 18); current minSdkVersion is 17">
+        <location
+            file="src/main/res/mipmap-xhdpi/ic_launcher.webp"/>
+    </issue>
+
+    <issue
+        id="WebpUnsupported"
+        message="WebP extended or lossless format requires Android 4.2.1 (API 18); current minSdkVersion is 17">
+        <location
+            file="src/main/res/mipmap-xxhdpi/ic_launcher.webp"/>
+    </issue>
+
+    <issue
+        id="WebpUnsupported"
+        message="WebP extended or lossless format requires Android 4.2.1 (API 18); current minSdkVersion is 17">
+        <location
+            file="src/main/res/mipmap-xxxhdpi/ic_launcher.webp"/>
+    </issue>
+
+    <issue
+        id="WebpUnsupported"
+        message="WebP extended or lossless format requires Android 4.2.1 (API 18); current minSdkVersion is 17">
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher_round.webp"/>
+    </issue>
+
+    <issue
+        id="WebpUnsupported"
+        message="WebP extended or lossless format requires Android 4.2.1 (API 18); current minSdkVersion is 17">
+        <location
+            file="src/main/res/mipmap-mdpi/ic_launcher_round.webp"/>
+    </issue>
+
+    <issue
+        id="WebpUnsupported"
+        message="WebP extended or lossless format requires Android 4.2.1 (API 18); current minSdkVersion is 17">
+        <location
+            file="src/main/res/mipmap-xhdpi/ic_launcher_round.webp"/>
+    </issue>
+
+    <issue
+        id="WebpUnsupported"
+        message="WebP extended or lossless format requires Android 4.2.1 (API 18); current minSdkVersion is 17">
+        <location
+            file="src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"/>
+    </issue>
+
+    <issue
+        id="WebpUnsupported"
+        message="WebP extended or lossless format requires Android 4.2.1 (API 18); current minSdkVersion is 17">
+        <location
+            file="src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/no_ivailable.jpg` in densityless folder">
+        <location
+            file="src/main/res/drawable/no_ivailable.jpg"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_product_details.xml"
+            line="10"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/product_item.xml"
+            line="11"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Item Name&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Item Name&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_product_details.xml"
+            line="28"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Item Price&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Item Price&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_product_details.xml"
+            line="35"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Item Description&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Item Description&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_product_details.xml"
+            line="46"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Product Title&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Product Title&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/product_item.xml"
+            line="22"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Product Subtitle&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Product Subtitle&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/product_item.xml"
+            line="33"
+            column="9"/>
+    </issue>
+
+</issues>
