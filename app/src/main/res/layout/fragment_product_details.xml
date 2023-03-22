@@ -1,49 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ProductDetailsFragment"
-        android:orientation="vertical">
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    tools:context=".ProductDetailsFragment">
 
-        <!-- Image of the item covering the top half of the screen -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:cardCornerRadius="50dp"
+            android:elevation="2dp"
+            android:backgroundTint="@color/black"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/round_arrow_back_24"
+                android:backgroundTint="@color/black"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
+
         <ImageView
             android:id="@+id/item_image"
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:layout_gravity="center_horizontal"
-            android:scaleType="fitCenter"/>
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Item name and price in the view under the image -->
-        <LinearLayout
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/view_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_image" />
+
+        <TextView
+            android:id="@+id/item_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/item_image"
-            android:orientation="vertical">
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/effra_std_rg"
+            android:paddingHorizontal="5dp"
+            android:text="Item Name"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/view"
+            app:layout_constraintTop_toTopOf="@id/view" />
 
-            <TextView
-                android:id="@+id/item_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Item Name"
-                android:textSize="20sp" />
+        <TextView
+            android:id="@+id/item_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:elevation="2dp"
+            android:fontFamily="@font/effra_std_rg"
+            android:paddingHorizontal="5dp"
+            android:text="$10"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_name" />
 
-            <TextView
-                android:id="@+id/item_price"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Item Price"
-                android:textSize="16sp" />
-
-        </LinearLayout>
-
-        <!-- Description of the item following under -->
         <TextView
             android:id="@+id/item_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/item_name"
             android:text="Item Description"
-            android:textSize="18sp" />
-
-    </LinearLayout>
+            android:textSize="16sp"
+            android:fontFamily="@font/effra_std_rg"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="5dp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/item_price"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
