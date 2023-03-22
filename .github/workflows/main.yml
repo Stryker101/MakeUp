@@ -80,3 +80,26 @@ jobs:
 #          with:
 #            name: instrumentation_test_report
 #            path: app/build/reports/androidTests/connected/
+=======
+
+  instrumentation-test:
+    needs: [ unit-test ]
+    runs-on: macos-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+
+      - name: Run espresso test
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+            api-level: 33
+            arch: x86_64
+            profile: Nexus 6
+            script: ./gradlew connectedCheck
+
+      - name: Upload test report
+        uses: actions/upload-artifact@v2
+        with:
+            name: instrumentation_test_report
+            path: app/build/reports/androidTests/connected/
+
