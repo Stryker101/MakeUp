@@ -2,8 +2,8 @@ package com.henryware.makemeup.di
 
 import android.content.Context
 import androidx.room.Room
-import com.henryware.makemeup.data.MakeUpApi
-import com.henryware.makemeup.database.ProductsDatabase
+import com.henryware.makemeup.data.local.ProductsDatabase
+import com.henryware.makemeup.data.remote.MakeUpApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

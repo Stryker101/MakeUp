@@ -1,4 +1,4 @@
-package com.henryware.makemeup
+package com.henryware.makemeup.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import com.henryware.makemeup.R
 import com.henryware.makemeup.databinding.FragmentProductListBinding
+import com.henryware.makemeup.presentation.adapters.ProductsAdapter
 import com.henryware.makemeup.utils.Resource
 import com.henryware.makemeup.viewmodel.ProductsViewModel
 import dagger.hilt.android.AndroidEntryPoint

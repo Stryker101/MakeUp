@@ -3,7 +3,7 @@ package com.henryware.makemeup.utils
 import androidx.room.TypeConverter
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.henryware.makemeup.response.ProductColor
+import com.henryware.makemeup.data.models.ProductColor
 
 class Converters {
     @TypeConverter
