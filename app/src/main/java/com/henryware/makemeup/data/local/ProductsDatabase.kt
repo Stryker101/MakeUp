@@ -6,7 +6,7 @@ import androidx.room.TypeConverters
 import com.henryware.makemeup.data.models.BrandsItem
 import com.henryware.makemeup.utils.Converters
 
-@Database(entities = [BrandsItem::class], version = 2)
+@Database(entities = [BrandsItem::class], version = 2, exportSchema = false)
 
 @TypeConverters(Converters::class)
 abstract class ProductsDatabase : RoomDatabase() {
