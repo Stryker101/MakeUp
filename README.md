@@ -19,3 +19,5 @@ Kotlin Coroutines
 DAO test.
 
 #other tests are still in production
+
+## A CI/CD pipeline workflow is setup and runs whenever there is a push or pull request to the main branch. the workflow runs a lint test, some unit tests and then generates an APK.
